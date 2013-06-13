@@ -1,0 +1,120 @@
+body {
+   font-family: verdana,arial,sans-serif;
+   text-align: center;
+   width: 640px;
+}
+
+h2 {
+ text-align: center;
+}
+.dice {
+   float: left;
+   width: 90px;
+   text-align: center;
+   font-weight: bold;
+   font-size: 3em;
+   font-family: verdana,arial,sans-serif;
+   border: 1px solid black;
+   color: #fff;
+   border-radius: 10px;
+   cursor: pointer;
+}
+#conservative {
+   background: #5c9b4a;
+}
+#characteristic {
+   background: #1e5ca8;
+}
+#reckless {
+   background: #b12136;
+}
+#expertise {
+   background: #e6eb23;
+   color: #333;
+}
+#challenge {
+   background: 8044c1;
+}
+#fortune {
+   background: #eee;
+   color: #333;
+}
+#misfortune {
+   background: #333;
+}
+.controls {
+   clear: all;
+}
+
+.plus {
+   border-bottom: 1px dotted black;
+   height: 92px;
+   line-height: 92px;
+}
+.dCount {
+   height: 92px;
+   line-height: 92px;
+}
+.minus {
+   border-top: 1px dotted black;
+   height: 92px;
+   line-height: 92px;
+}
+.control {
+   /* 640/4 = 160 */
+   float: left;
+   width: 154px;
+   text-align: center;
+   border: 1px solid black;
+   margin: 2px;
+   height: 80px;
+   line-height: 80px;
+}
+.results {
+   /* 640/8 = 80 */
+   float: left;
+   width: 76px;
+   text-align: center;
+   border: 1px solid black;
+   margin: 1px;
+   background: #333;
+   font-family: verdana,arial,sans-serif;
+   font-size: 1.2em;
+   font-weight: bold;
+   color: #eee;
+}
+.blank {
+   height:40px;
+}
+.totals {
+   height:40px;
+   line-height:40px;
+}
+.nets {
+   height:40px;
+   line-height:34px;
+}
+.img {
+   height:40px;
+   line-height:40px;
+}
+#resultText {
+   text-align: center;
+   color:gray;
+}
+#roll {
+   text-align: center;
+   width:640px;
+   height: 100px;
+   line-height: 100px;
+   background: green;
+   border: 3px solid gray;
+}
+
+#dMisfortune
+#dConservative
+#dFortune
+#dChallenge
+#dExpertise
+#dReckless
+#dCharacteristic

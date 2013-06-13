@@ -1,0 +1,103 @@
+<!doctype=html>
+<html>
+   <head>
+      <link type="text/css" id="mainCss" rel="stylesheet" href="css/wfrp.css" media="screen" />
+      <script type="text/javascript" src="js/dice.js"></script>
+      <script type="text/javascript" src="js/main.js"></script>
+   </head>
+   <body>
+      <h2>Dice</h2>
+      <div class="diceContainer">
+         <div class="dice" id="conservative">
+            <div class="plus" onclick="javascript: addCO();" > + </div>
+            <div class="dCount" id="dConservative"> 0 </div>
+            <div class="minus" onclick="javascript: subCO();" > &ndash; </div>
+         </div>
+         <div class="dice" id="characteristic">
+            <div class="plus"  onclick="javascript: addCH();" > + </div>
+            <div class="dCount" id="dCharacteristic"> 0 </div>
+            <div class="minus" onclick="javascript: subCH();" > &ndash; </div>
+         </div>
+         <div class="dice" id="reckless">
+            <div class="plus" onclick="javascript: addRE();" > + </div>
+            <div class="dCount" id="dReckless"> 0 </div>
+            <div class="minus" onclick="javascript: subRE();" > &ndash; </div>
+         </div>
+         <div class="dice" id="expertise">
+            <div class="plus" onclick="javascript: addEX();" > + </div>
+            <div class="dCount" id="dExpertise"> 0 </div>
+            <div class="minus" onclick="javascript: subEX();" > &ndash; </div>
+         </div>
+         <div class="dice" id="challenge">
+            <div class="plus" onclick="javascript: addCL();" > + </div>
+            <div class="dCount" id="dChallenge"> 0 </div>
+            <div class="minus" onclick="javascript: subCL();" > &ndash; </div>
+         </div>
+         <div class="dice" id="fortune">
+            <div class="plus" onclick="javascript: addFO();" > + </div>
+            <div class="dCount" id="dFortune"> 0 </div>
+            <div class="minus" onclick="javascript: subFO();" > &ndash; </div>
+         </div>
+         <div class="dice" id="misfortune">
+            <div class="plus" onclick="javascript: addMI();" > + </div>
+            <div class="dCount" id="dMisfortune"> 0 </div>
+            <div class="minus" onclick="javascript: subMI();" > &ndash; </div>
+         </div>
+      </div>
+      <br style="clear: left;" />
+      <h2>Controls</h2>
+      <div class="controlsContainer">
+         <div class="control" id="save1"> Save 1 </div>
+         <div class="control" id="save2"> Save 2 </div>
+         <div class="control" id="save3"> Save 3 </div>
+         <div class="control" id="clear" onclick="javascript: clear();" > Clear Pool </div>
+      </div>
+      <br style="clear: left;" />
+      <div id="roll" onclick="javascript: doRoll();" > ROLL! </div>
+      <br style="clear: left;" />
+      <h2>Results</h2>
+      <div class="resultsContainer">
+         <div id="resultText"> Roll to see... </div>
+         <div class="results" id="successes">
+            <div class="totals" id="totSuccesses"> 0 </div>
+            <div class="img"><img src="img/hammer.png" /></div>
+            <div class="nets" id="netSuccesses"> 0 </div>
+         </div>
+         <div class="results" id="boons">
+            <div class="totals" id="totBoons"> 0 </div>
+            <div class="img"><img src="img/eagle.png" /></div>
+            <div class="blank"> </div>
+         </div>
+         <div class="results" id="banes">
+            <div class="totals" id="totBanes"> 0 </div>
+            <div class="img"><img src="img/skull.png" /></div>
+            <div class="blank"> </div>
+         </div>
+         <div class="results" id="comets">
+            <div class="totals" id="totComets"> 0 </div>
+            <div class="img"><img src="img/comet.png" /></div>
+            <div class="blank"> </div>
+         </div>
+         <div class="results" id="chaosStars">
+            <div class="totals" id="totChaosStars"> 0 </div>
+            <div class="img"><img src="img/star.png" /></div>
+            <div class="blank"> </div>
+         </div>
+         <div class="results" id="delays">
+            <div class="totals" id="totDelays"> 0 </div>
+            <div class="img"><img src="img/hourglass.png" /></div>
+            <div class="blank"> </div>
+         </div>
+         <div class="results" id="exertions">
+            <div class="totals" id="totExertions"> 0 </div>
+            <div class="img"><img src="img/blood.png" /></div>
+            <div class="blank"> </div>
+         </div>
+         <div class="results" id="challenges">
+            <div class="totals" id="totChallenges"> 0 </div>
+            <div class="img"><img src="img/sword.png" /></div>
+            <div class="nets" id="netChallenges"> 0 </div>
+         </div>
+      </div>
+   </body>
+</html>
