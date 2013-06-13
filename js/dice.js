@@ -238,7 +238,7 @@ ResultSet.prototype.tally = function(face) {
   }
 };
 
-ResultSet.prototype.reset = function() {
+ResultSet.prototype.clear = function() {
   this.successes = 0;
   this.boons = 0;
   this.banes = 0;
@@ -247,7 +247,7 @@ ResultSet.prototype.reset = function() {
   this.delays = 0;
   this.exertions = 0;
   this.challenges = 0;
-};
+}e
 
 // Pool of Dice
 function DicePool() {

@@ -9,7 +9,7 @@ h2 {
 }
 .dice {
    float: left;
-   width: 90px;
+   width: 89px;
    text-align: center;
    font-weight: bold;
    font-size: 3em;
@@ -67,8 +67,8 @@ h2 {
    text-align: center;
    border: 1px solid black;
    margin: 2px;
-   height: 80px;
-   line-height: 80px;
+   height: 70px;
+   line-height: 70px;
 }
 .results {
    /* 640/8 = 80 */
@@ -105,10 +105,16 @@ h2 {
 #roll {
    text-align: center;
    width:640px;
-   height: 100px;
-   line-height: 100px;
+   height: 80px;
+   line-height: 80px;
    background: green;
    border: 3px solid gray;
+}
+#netChallenges {
+   color: #b12136;
+}
+#netSuccesses {
+   color: #5c9b4a;
 }
 
 #dMisfortune
