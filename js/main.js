@@ -1,6 +1,7 @@
 // Globals
-POOL = new DicePool();
-RESULTS = new ResultSet();
+var POOL = new DicePool();
+var RESULTS = new ResultSet();
+var T_START = 0;
 
 // Utilities to reduce inline js
 function uiset(element, value) {
@@ -69,6 +70,30 @@ function doRoll() {
   POOL.roll(RESULTS);
 
   uiupdateresults();
+}
+
+function timerStart() {
+  var now = new Date();
+  T_START = now.getTime();
+};
+
+function saveOrLoad(saveElement) {
+  var now = new Date();
+  if (T_START > 0) {
+    if ((now.getTime() - T_START) > 1000) {
+      savePool(saveElement);
+    } else {
+      loadPool(saveElement);
+    }
+  }
+}
+
+function loadPool(saveElement) {
+  alert('loading from ' + saveElement);
+}
+
+function savePool(saveElement) {
+  POOL.marshall();
 }
 
 //###########################
@@ -391,23 +416,16 @@ DicePool.prototype.sub = function(type) {
 
 
 DicePool.prototype.marshall = function () {
-  // This is where I'll convert the dice to a string that can be saved in a cookie...
-  return true;
+  var diceString = '';
+  for (var dieType in this.dice) {
+    diceString += dieType + '|' + this.dice[dieType].length + '/';
+  };
+  return(diceString.slice(0,-1));
 };
 
-DicePool.prototype.unmarshall = function () {
-  // This is where I'll convert the encoded string back into the array object...
-  return true;
-};
-
-DicePool.prototype.save = function () {
-  // This is where I'll save the dice pool state to both a local variable and a cookie...
-  return;
-};
-
-DicePool.prototype.load = function () {
-  // This is where I'll load a dice pool object from a saved local state...
-  return;
+DicePool.prototype.unmarshall = function (diceString) {
+  var dice = split(diceString, '|');
+  //do some other shit here.
 };
 
 DicePool.prototype.clear = function () {
